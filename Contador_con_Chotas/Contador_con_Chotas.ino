@@ -21,22 +21,26 @@ void loop()
 {
   for(int i = 0; i < 10; i++)
   {
-    digitalWrite(centenas, LOW);
-    c = i;
+    digitalWrite(centenas, HIGH);
     for(int j = 0; j < 10; j++)
     {
-      digitalWrite(decenas, LOW);
-      b = j;
-      Digitos(b);
+      digitalWrite(decenas, HIGH);
       for(int k = 0; k < 10; k++)
       {
         digitalWrite(unidades, LOW);
         a = k;
         Digitos(a);
+        serial.println
         delay(750);
       }
+      digitalWrite(decenas, LOW);
+      b = j;
+      Digitos(b);
       delay(750);
     }
+    digitalWrite(centenas, LOW);
+    c = i;
+    Digitos(c);
     delay(750);
   }
 }
