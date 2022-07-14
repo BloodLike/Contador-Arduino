@@ -13,7 +13,20 @@ pinMode(i,OUTPUT);                                                              
 }
 
 void loop() {
-
+//APAGAR TODOS LOS DIGITOS 
+digitalWrite(unidades,HIGH);
+digitalWrite(decenas,HIGH);
+digitalWrite(centenas,HIGH);
+digitalWrite(millar,HIGH);
+//EJEMPLO HACER EL NUMERO 1 (unidades)
+digitalWrite(unidades, LOW);
+a = 1;
+digitos(a);
+//EJEMPLO PARA HACER EL NUMERO 10 (decenas y unidades)
+digitalWrite(decenas,LOW);
+b = 1, a = 0;
+digitos(a);
+digitos(b);
 
 }
 
