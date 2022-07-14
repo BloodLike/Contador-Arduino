@@ -19,7 +19,7 @@ void setup()
 
 void loop()
 {
-  for(int i = 0; i < 10; i++
+  for(int i = 0; i < 10; i++)
   {
     digitalWrite(centenas, LOW);
     c = i;
