@@ -13,6 +13,124 @@ pinMode(i,OUTPUT);                                                              
 }
 
 void loop() {
+//APAGAR TODOS LOS DIGITOS 
+digitalWrite(unidades,HIGH);
+digitalWrite(decenas,HIGH);
+digitalWrite(centenas,HIGH);
+digitalWrite(millar,HIGH);
+//EJEMPLO HACER EL NUMERO 1 (unidades)
+digitalWrite(unidades, LOW);
+a = 1;
+digitos(a);
+//EJEMPLO PARA HACER EL NUMERO 10 (decenas y unidades)
+digitalWrite(decenas,LOW);
+b = 1, a = 0;
+digitos(a);
+digitos(b);
 
+}
 
+void digitos(long numero)                                                          //METODO PARA HACER LOS NUMEROS EN EL DISPLAY
+{
+  if (numero == 0)
+  {
+  digitalWrite( Display[0], HIGH);
+  digitalWrite( Display[1], HIGH);
+  digitalWrite( Display[2],HIGH);
+  digitalWrite( Display[3], HIGH);
+  digitalWrite( Display[4], HIGH);
+  digitalWrite( Display[5], HIGH);
+  digitalWrite( Display[6], LOW);
+  }
+
+if (numero == 1)
+{
+  digitalWrite( Display[0], LOW);
+  digitalWrite( Display[1], HIGH);
+  digitalWrite( Display[2], HIGH);
+  digitalWrite( Display[3], LOW);
+  digitalWrite( Display[4], LOW);
+  digitalWrite( Display[5], LOW);
+  digitalWrite( Display[6], LOW);
+}
+if (numero == 2)
+{
+  digitalWrite( Display[0], HIGH);
+  digitalWrite( Display[1], HIGH);
+  digitalWrite( Display[2], LOW);
+  digitalWrite( Display[3], HIGH);
+  digitalWrite( Display[4], HIGH);
+  digitalWrite( Display[5], LOW);
+  digitalWrite( Display[6], HIGH);
+}
+if (numero == 3)
+{
+  digitalWrite( Display[0], HIGH);
+  digitalWrite( Display[1], HIGH);
+  digitalWrite( Display[2], HIGH);
+  digitalWrite( Display[3], HIGH);
+  digitalWrite( Display[4], LOW);
+  digitalWrite( Display[5], LOW);
+  digitalWrite( Display[6], HIGH);
+}
+if (numero == 4)
+{
+  digitalWrite( Display[0], LOW);
+  digitalWrite( Display[1], HIGH);
+  digitalWrite( Display[2], HIGH);
+  digitalWrite( Display[3], LOW);
+  digitalWrite( Display[4], LOW);
+  digitalWrite( Display[5], HIGH);
+  digitalWrite( Display[6], HIGH);
+}
+if ( numero == 5)
+{
+  digitalWrite( Display[0], HIGH);
+  digitalWrite( Display[1], LOW);
+  digitalWrite( Display[2], HIGH);
+  digitalWrite( Display[3], HIGH);
+  digitalWrite( Display[4], LOW);
+  digitalWrite( Display[5], HIGH);
+  digitalWrite( Display[6], HIGH);
+}
+if ( numero == 6)
+{
+  digitalWrite( Display[0], HIGH);
+  digitalWrite( Display[1], LOW);
+  digitalWrite( Display[2], HIGH);
+  digitalWrite( Display[3], HIGH);
+  digitalWrite( Display[4], HIGH);
+  digitalWrite( Display[5], HIGH);
+  digitalWrite( Display[6], HIGH);
+}
+if (numero == 7)
+{
+  digitalWrite( Display[0], HIGH);
+  digitalWrite( Display[1], HIGH);
+  digitalWrite( Display[2], HIGH);
+  digitalWrite( Display[3], LOW);
+  digitalWrite( Display[4], LOW);
+  digitalWrite( Display[5], LOW);
+  digitalWrite( Display[6], LOW);
+}
+if (numero == 8)
+{
+  digitalWrite( Display[0], HIGH);
+  digitalWrite( Display[1], HIGH);
+  digitalWrite( Display[2], HIGH);
+  digitalWrite( Display[3], HIGH);
+  digitalWrite( Display[4], HIGH);
+  digitalWrite( Display[5], HIGH);
+  digitalWrite( Display[6], HIGH);
+}
+if ( numero == 9)
+  {
+  digitalWrite( Display[0], HIGH);
+  digitalWrite( Display[1], HIGH);
+  digitalWrite( Display[2], HIGH);
+  digitalWrite( Display[3], LOW);
+  digitalWrite( Display[4], LOW);
+  digitalWrite( Display[5], HIGH);
+  digitalWrite( Display[6], HIGH);
+  }
 }
